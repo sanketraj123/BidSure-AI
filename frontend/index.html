@@ -1,0 +1,1391 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    GeM Compliance AI — Evidence Workspace
+  </title>
+
+
+  <!-- Google Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- Main CSS -->
+
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  >
+
+</head>
+
+
+<body>
+
+  <div class="app-shell">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="brand-mark">
+          G
+        </div>
+
+        <div>
+
+          <strong>
+            GeM Compliance AI
+          </strong>
+
+          <span>
+            Evidence Workspace
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <nav class="side-nav">
+
+        <a
+          class="nav-item active"
+          href="#overview"
+        >
+          <span>01</span>
+          Overview
+        </a>
+
+        <a
+          class="nav-item"
+          href="#ingestion"
+        >
+          <span>02</span>
+          Ingestion
+        </a>
+
+        <a
+          class="nav-item"
+          href="#analysis"
+        >
+          <span>03</span>
+          Compliance
+        </a>
+
+        <a
+          class="nav-item"
+          href="#evidence"
+        >
+          <span>04</span>
+          Evidence
+        </a>
+
+      </nav>
+
+
+      <div class="sidebar-bottom">
+
+        <div class="sandbox-card">
+
+          <div class="pulse"></div>
+
+          <div>
+
+            <b>
+              Synthetic Sandbox
+            </b>
+
+            <small>
+              Prototype verification mode
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <a
+          class="api-link"
+          href="http://127.0.0.1:8000/docs"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open API Docs ↗
+        </a>
+
+      </div>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="main">
+
+
+      <!-- TOP BAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <div class="eyebrow">
+            PROCUREMENT INTELLIGENCE / 2026
+          </div>
+
+          <h1>
+
+            Bid compliance,
+
+            <em>
+              without the manual chase.
+            </em>
+
+          </h1>
+
+          <p>
+            Upload tender and bidder evidence. Extract identifiers,
+            map proof to requirements, and review every decision
+            from one audit-ready workspace.
+          </p>
+
+        </div>
+
+
+        <div class="top-actions">
+
+          <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            API connected
+
+          </div>
+
+
+          <button
+            class="ghost-btn"
+            id="clearBtn"
+            type="button"
+          >
+            Clear session
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <!-- =========================================
+           OVERVIEW
+      ========================================== -->
+
+      <section
+        id="overview"
+        class="hero-grid"
+      >
+
+        <div class="hero-card">
+
+          <div class="hero-label">
+            COMPLIANCE WORKSPACE
+          </div>
+
+          <h2>
+
+            From document stack
+
+            <br>
+
+            <span>
+              to evidence map.
+            </span>
+
+          </h2>
+
+
+          <div class="hero-meta">
+
+            <span>
+              13 checks
+            </span>
+
+            <i></i>
+
+            <span>
+              3 identity verifications
+            </span>
+
+            <i></i>
+
+            <span>
+              audit trail ready
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="risk-card"
+          id="riskCard"
+        >
+
+          <span class="card-kicker">
+            CURRENT RISK
+          </span>
+
+          <strong id="riskValue">
+            —
+          </strong>
+
+          <p id="riskText">
+            Run an analysis to calculate the current review state.
+          </p>
+
+          <div class="risk-line">
+
+            <span id="riskFill"></span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           INGESTION
+      ========================================== -->
+
+      <section
+        id="ingestion"
+        class="workspace-section"
+      >
+
+        <div class="section-heading">
+
+          <div>
+
+            <span>
+              01 / INGESTION
+            </span>
+
+            <h3>
+              Build the evidence set
+            </h3>
+
+          </div>
+
+          <p>
+            Keep the tender separate from bidder evidence so
+            the engine knows what must be checked.
+          </p>
+
+        </div>
+
+
+        <div class="ingest-grid">
+
+
+          <!-- =====================================
+               TENDER
+          ====================================== -->
+
+          <div class="upload-panel">
+
+            <div class="panel-head">
+
+              <div>
+
+                <span class="panel-index">
+                  A
+                </span>
+
+                <div>
+
+                  <h4>
+                    Tender document
+                  </h4>
+
+                  <small>
+                    Defines the compliance requirements
+                  </small>
+
+                </div>
+
+              </div>
+
+              <span class="format-pill">
+                PDF
+              </span>
+
+            </div>
+
+
+            <label
+              class="dropzone"
+              id="tenderDrop"
+              for="tenderFile"
+            >
+
+              <input
+                type="file"
+                id="tenderFile"
+                name="tenderFile"
+                accept=".pdf,application/pdf"
+              >
+
+              <div class="upload-icon">
+                ↑
+              </div>
+
+              <b>
+                Drop tender PDF here
+              </b>
+
+              <span>
+                or click to browse
+              </span>
+
+            </label>
+
+
+            <div
+              class="file-row hidden"
+              id="tenderFileRow"
+            >
+
+              <span class="file-icon">
+                PDF
+              </span>
+
+              <div>
+
+                <b id="tenderName">
+                  —
+                </b>
+
+                <small id="tenderStatus">
+                  Ready
+                </small>
+
+              </div>
+
+              <button
+                class="remove-file"
+                id="removeTenderBtn"
+                type="button"
+              >
+                ×
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================
+               BIDDER
+          ====================================== -->
+
+          <div class="upload-panel featured">
+
+            <div class="panel-head">
+
+              <div>
+
+                <span class="panel-index">
+                  B
+                </span>
+
+                <div>
+
+                  <h4>
+                    Bidder evidence
+                  </h4>
+
+                  <small>
+                    Registration, declarations & supporting proof
+                  </small>
+
+                </div>
+
+              </div>
+
+              <span class="format-pill">
+                MULTI PDF
+              </span>
+
+            </div>
+
+
+            <label
+              class="dropzone"
+              id="bidderDrop"
+              for="bidderFiles"
+            >
+
+              <input
+                type="file"
+                id="bidderFiles"
+                name="bidderFiles"
+                accept=".pdf,application/pdf"
+                multiple
+              >
+
+              <div class="upload-icon">
+                ＋
+              </div>
+
+              <b>
+                Add bidder PDFs
+              </b>
+
+              <span>
+                Upload one or more supporting documents
+              </span>
+
+            </label>
+
+
+            <div
+              id="bidderList"
+              class="file-list"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="action-bar">
+
+          <div class="progress-copy">
+
+            <span
+              class="loader-dot"
+              id="loaderDot"
+            ></span>
+
+            <span id="actionMessage">
+              Ready for documents
+            </span>
+
+          </div>
+
+
+          <button
+            class="primary-btn"
+            id="analyzeBtn"
+            type="button"
+          >
+
+            Run compliance analysis
+
+            <span>
+              →
+            </span>
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           ANALYSIS
+      ========================================== -->
+
+      <section
+        id="analysis"
+        class="workspace-section"
+      >
+
+        <div class="section-heading">
+
+          <div>
+
+            <span>
+              02 / ANALYSIS
+            </span>
+
+            <h3>
+              Compliance command center
+            </h3>
+
+          </div>
+
+          <p>
+            Every check is shown with status,
+            reason and evidence reference.
+          </p>
+
+        </div>
+
+
+        <!-- METRICS -->
+
+        <div class="metric-grid">
+
+
+          <div class="metric">
+
+            <small>
+              COMPLIANT
+            </small>
+
+            <strong id="mCompliant">
+              0
+            </strong>
+
+            <span>
+              Verified evidence
+            </span>
+
+          </div>
+
+
+          <div class="metric">
+
+            <small>
+              NON-COMPLIANT
+            </small>
+
+            <strong id="mNon">
+              0
+            </strong>
+
+            <span>
+              Needs attention
+            </span>
+
+          </div>
+
+
+          <div class="metric">
+
+            <small>
+              PENDING
+            </small>
+
+            <strong id="mPending">
+              0
+            </strong>
+
+            <span>
+              Evidence missing
+            </span>
+
+          </div>
+
+
+          <div class="metric dark">
+
+            <small>
+              TOTAL CHECKS
+            </small>
+
+            <strong id="mTotal">
+              13
+            </strong>
+
+            <span>
+              Requirements in scope
+            </span>
+
+          </div>
+
+
+          <div class="metric">
+
+            <small>
+              COMPLIANCE SCORE
+            </small>
+
+            <strong id="mScore">
+              0%
+            </strong>
+
+            <span>
+              Overall compliance
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- RESULTS CARD -->
+
+        <div class="results-card">
+
+
+          <div class="results-top">
+
+            <div>
+
+              <span class="panel-kicker">
+                DECISION REGISTER
+              </span>
+
+              <h4>
+                Requirement matrix
+              </h4>
+
+            </div>
+
+
+            <button
+              class="secondary-btn"
+              id="exportBtn"
+              type="button"
+            >
+              Export JSON ↗
+            </button>
+
+          </div>
+
+
+          <!-- BIDDER FILTER -->
+
+          <div
+            id="bidderFilterBox"
+            style="
+              display:none;
+              margin:0 0 18px 0;
+              padding:16px 18px;
+              background:#fff;
+              border:1px solid #e5e7eb;
+              border-radius:12px;
+              box-shadow:0 4px 14px rgba(15,23,42,.04);
+            "
+          >
+
+            <div
+              style="
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:16px;
+                flex-wrap:wrap;
+              "
+            >
+
+              <div>
+
+                <div
+                  style="
+                    font-size:16px;
+                    font-weight:700;
+                    color:#111827;
+                  "
+                >
+                  View Bidder Report
+                </div>
+
+                <div
+                  style="
+                    margin-top:4px;
+                    font-size:12px;
+                    color:#6b7280;
+                  "
+                >
+                  Select a bidder to view their individual compliance checks.
+                </div>
+
+              </div>
+
+
+              <select
+                id="bidderFilterSelect"
+                style="
+                  min-width:340px;
+                  padding:10px 12px;
+                  border:1px solid #d1d5db;
+                  border-radius:8px;
+                  background:#fff;
+                  color:#111827;
+                  font-size:14px;
+                  cursor:pointer;
+                "
+              >
+
+                <option value="all">
+                  All Bidders
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <!-- TABLE -->
+
+          <div class="table-wrap">
+
+            <table>
+
+              <thead>
+
+                <tr>
+
+                  <th>
+                    Requirement
+                  </th>
+
+                  <th>
+                    Type
+                  </th>
+
+                  <th>
+                    Status
+                  </th>
+
+                  <th>
+                    Reason
+                  </th>
+
+                  <th>
+                    Evidence
+                  </th>
+
+                </tr>
+
+              </thead>
+
+
+              <tbody id="resultsBody">
+
+                <tr class="empty-row">
+
+                  <td colspan="5">
+
+                    <div class="empty-state">
+
+                      <b>
+                        No analysis yet
+                      </b>
+
+                      <span>
+                        Upload documents and run the compliance engine.
+                      </span>
+
+                    </div>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+
+          <!-- =====================================
+               AUDIT TRAIL
+          ====================================== -->
+
+          <div
+            id="auditTrailCard"
+            style="
+              margin-top:24px;
+              padding:20px;
+              border:1px solid #e5e7eb;
+              border-radius:16px;
+              background:#ffffff;
+            "
+          >
+
+            <div
+              style="
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                gap:12px;
+                margin-bottom:18px;
+              "
+            >
+
+              <div>
+
+                <h3
+                  style="
+                    margin:0;
+                    font-size:18px;
+                    color:#111827;
+                  "
+                >
+                  Audit Trail
+                </h3>
+
+                <p
+                  style="
+                    margin:5px 0 0;
+                    color:#6b7280;
+                    font-size:13px;
+                  "
+                >
+                  Verification activity and analysis record
+                </p>
+
+              </div>
+
+
+              <span
+                id="auditStatus"
+                style="
+                  padding:6px 10px;
+                  border-radius:999px;
+                  background:#eef2ff;
+                  color:#4338ca;
+                  font-size:12px;
+                  font-weight:600;
+                "
+              >
+                No analysis yet
+              </span>
+
+            </div>
+
+
+            <div
+              id="auditTrailContent"
+              style="
+                color:#6b7280;
+                font-size:14px;
+              "
+            >
+
+              Run an analysis to generate the audit trail.
+
+            </div>
+
+          </div>
+
+
+          <!-- DISCLAIMER -->
+
+          <div class="disclaimer">
+
+            Prototype mode: verification uses synthetic sandbox
+            records and is not official government verification.
+
+          </div>
+
+
+          <!-- =========================================
+               PROCUREMENT OFFICER REVIEW
+          ========================================== -->
+
+          <div
+            id="officerReviewCard"
+            style="
+              margin-top:24px;
+              padding:24px;
+              border:1px solid #e5e7eb;
+              border-radius:16px;
+              background:#ffffff;
+              box-shadow:0 6px 20px rgba(15,23,42,.05);
+            "
+          >
+
+            <div
+              style="
+                display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                gap:16px;
+                flex-wrap:wrap;
+                margin-bottom:20px;
+              "
+            >
+
+              <div>
+
+                <span
+                  style="
+                    font-size:11px;
+                    font-weight:700;
+                    letter-spacing:.08em;
+                    color:#4f46e5;
+                  "
+                >
+                  04 / PROCUREMENT DECISION
+                </span>
+
+                <h3
+                  style="
+                    margin:6px 0 4px;
+                    font-size:20px;
+                    color:#111827;
+                  "
+                >
+                  Procurement Officer Review
+                </h3>
+
+                <p
+                  style="
+                    margin:0;
+                    color:#6b7280;
+                    font-size:13px;
+                  "
+                >
+                  Review the AI verification result and record the final procurement decision.
+                </p>
+
+              </div>
+
+
+              <span
+                id="officerReviewStatus"
+                style="
+                  padding:7px 12px;
+                  border-radius:999px;
+                  background:#fff7ed;
+                  color:#c2410c;
+                  font-size:12px;
+                  font-weight:700;
+                "
+              >
+                Pending Officer Review
+              </span>
+
+            </div>
+
+
+            <!-- BIDDER SELECT -->
+
+            <div style="margin-bottom:18px;">
+
+              <label
+                style="
+                  display:block;
+                  margin-bottom:7px;
+                  font-size:13px;
+                  font-weight:700;
+                  color:#374151;
+                "
+              >
+                Select Bidder
+              </label>
+
+              <select
+                id="officerBidderSelect"
+                style="
+                  width:100%;
+                  max-width:520px;
+                  padding:11px 13px;
+                  border:1px solid #d1d5db;
+                  border-radius:9px;
+                  background:#fff;
+                  color:#111827;
+                  font-size:14px;
+                "
+              >
+
+                <option value="">
+                  Run analysis first
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- AI SUMMARY -->
+
+            <div
+              id="officerAISummary"
+              style="
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+                gap:12px;
+                margin-bottom:20px;
+              "
+            >
+
+              <div
+                style="
+                  padding:14px;
+                  border:1px solid #e5e7eb;
+                  border-radius:10px;
+                  background:#f9fafb;
+                "
+              >
+
+                <small style="color:#6b7280;">
+                  COMPLIANCE SCORE
+                </small>
+
+                <strong
+                  id="officerScore"
+                  style="
+                    display:block;
+                    margin-top:5px;
+                    font-size:22px;
+                    color:#111827;
+                  "
+                >
+                  —
+                </strong>
+
+              </div>
+
+
+              <div
+                style="
+                  padding:14px;
+                  border:1px solid #e5e7eb;
+                  border-radius:10px;
+                  background:#f9fafb;
+                "
+              >
+
+                <small style="color:#6b7280;">
+                  RISK LEVEL
+                </small>
+
+                <strong
+                  id="officerRisk"
+                  style="
+                    display:block;
+                    margin-top:5px;
+                    font-size:22px;
+                    color:#111827;
+                  "
+                >
+                  —
+                </strong>
+
+              </div>
+
+
+              <div
+                style="
+                  padding:14px;
+                  border:1px solid #e5e7eb;
+                  border-radius:10px;
+                  background:#f9fafb;
+                "
+              >
+
+                <small style="color:#6b7280;">
+                  AI RECOMMENDATION
+                </small>
+
+                <div
+                  id="officerRecommendation"
+                  style="
+                    margin-top:6px;
+                    color:#374151;
+                    font-size:13px;
+                    line-height:1.5;
+                  "
+                >
+                  Run analysis to view AI recommendation.
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- FINAL DECISION -->
+
+            <div style="margin-bottom:18px;">
+
+              <label
+                style="
+                  display:block;
+                  margin-bottom:7px;
+                  font-size:13px;
+                  font-weight:700;
+                  color:#374151;
+                "
+              >
+                Final Procurement Decision
+              </label>
+
+              <select
+                id="officerDecision"
+                style="
+                  width:100%;
+                  max-width:520px;
+                  padding:11px 13px;
+                  border:1px solid #d1d5db;
+                  border-radius:9px;
+                  background:#fff;
+                  color:#111827;
+                  font-size:14px;
+                "
+              >
+
+                <option value="">
+                  Select final decision
+                </option>
+
+                <option value="Qualified">
+                  Qualified
+                </option>
+
+                <option value="Disqualified">
+                  Disqualified
+                </option>
+
+                <option value="Clarification Required">
+                  Clarification Required
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- OFFICER REMARKS -->
+
+            <div style="margin-bottom:18px;">
+
+              <label
+                style="
+                  display:block;
+                  margin-bottom:7px;
+                  font-size:13px;
+                  font-weight:700;
+                  color:#374151;
+                "
+              >
+                Procurement Officer Remarks
+              </label>
+
+              <textarea
+                id="officerRemarks"
+                rows="4"
+                placeholder="Enter reason, observations or procurement remarks..."
+                style="
+                  width:100%;
+                  box-sizing:border-box;
+                  padding:12px 13px;
+                  border:1px solid #d1d5db;
+                  border-radius:9px;
+                  resize:vertical;
+                  font-family:inherit;
+                  font-size:14px;
+                  color:#111827;
+                "
+              ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <div
+              style="
+                display:flex;
+                justify-content:flex-end;
+                align-items:center;
+                gap:12px;
+                flex-wrap:wrap;
+              "
+            >
+
+              <span
+                id="officerDecisionMessage"
+                style="
+                  color:#6b7280;
+                  font-size:13px;
+                "
+              >
+                Final decision is controlled by the Procurement Officer.
+              </span>
+
+              <button
+                id="submitOfficerDecision"
+                type="button"
+                class="primary-btn"
+              >
+                Submit Officer Decision →
+              </button>
+
+            </div>
+
+
+            <!-- DECISION RECORD -->
+
+            <div
+              id="officerDecisionRecord"
+              style="
+                display:none;
+                margin-top:20px;
+                padding:16px;
+                border-radius:10px;
+                background:#f9fafb;
+                border:1px solid #e5e7eb;
+              "
+            >
+
+              <strong
+                style="
+                  display:block;
+                  margin-bottom:8px;
+                  color:#111827;
+                "
+              >
+                Decision Recorded
+              </strong>
+
+              <div
+                id="officerDecisionRecordText"
+                style="
+                  color:#374151;
+                  font-size:13px;
+                  line-height:1.6;
+                "
+              ></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           EVIDENCE
+      ========================================== -->
+
+      <section
+        id="evidence"
+        class="workspace-section evidence-section"
+      >
+
+        <div class="section-heading">
+
+          <div>
+
+            <span>
+              03 / EVIDENCE
+            </span>
+
+            <h3>
+              Extracted facts
+            </h3>
+
+          </div>
+
+          <p>
+            Inspect the identifiers and fields extracted from
+            the uploaded bidder evidence.
+          </p>
+
+        </div>
+
+
+        <div
+          class="evidence-grid"
+          id="evidenceGrid"
+        >
+
+          <div class="evidence-empty">
+            No extracted evidence yet.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           FOOTER
+      ========================================== -->
+
+      <footer>
+
+        <div>
+
+          <b>
+            GeM Compliance AI
+          </b>
+
+          / Evidence Workspace
+
+        </div>
+
+        <span>
+          Built for SIH prototype demonstration
+        </span>
+
+      </footer>
+
+    </main>
+
+  </div>
+
+
+  <!-- TOAST -->
+
+  <div
+    class="toast"
+    id="toast"
+  ></div>
+
+
+  <!-- =========================================
+       FINAL SCRIPT
+
+       IMPORTANT:
+       Do NOT load api.js here.
+       app.js contains the API functions.
+  ========================================== -->
+
+  <script src="js/app.js?v=20260927_FINAL"></script>
+
+</body>
+
+</html>
